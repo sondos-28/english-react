@@ -1,0 +1,104 @@
+/* src/App.css */
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Poppins:wght@300;400;600;800&display=swap');
+
+:root {
+  --primary: #2563EB;
+  --secondary: #1E40AF;
+  --accent: #F59E0B;
+  --bg-main: #F8FAFC;
+  --bg-card: #FFFFFF;
+  --text-main: #0F172A;
+  --text-body: #334155;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Poppins', sans-serif; background: var(--bg-main); color: var(--text-main); line-height: 1.7; }
+a { text-decoration: none; color: inherit; transition: 0.3s; }
+
+/* Utilities */
+.container { max-width: 1280px; margin: 0 auto; padding: 0 24px; }
+.btn { display: inline-flex; align-items: center; justify-content: center; background: var(--primary); color: white; padding: 14px 32px; border-radius: 8px; font-weight: 600; border: none; cursor: pointer; transition: 0.3s; font-size: 1.1rem; }
+.btn:hover { background: var(--secondary); transform: translateY(-3px); }
+
+/* Navbar */
+.navbar { background: white; height: 80px; display: flex; align-items: center; justify-content: space-between; padding: 0 50px; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+.nav-logo { font-size: 1.8rem; font-weight: 800; color: var(--primary); }
+.nav-menu { display: flex; gap: 30px; }
+.nav-item { font-weight: 500; color: var(--text-body); }
+.nav-item:hover { color: var(--primary); }
+
+/* --- HERO SECTION (تعديلات الهيدر) --- */
+.hero {
+  /* غيري الرابط داخل url() بصورتك الخاصة.
+     يمكنك وضع الصورة في مجلد public وكتابة اسمه، مثلاً: url('/header-bg.jpg')
+  */
+
+  background: linear-gradient(rgba(0, 0, 0, 0.363), rgba(0,0,0,0.7)), url('./photo.png'); 
+  background-size: cover;
+  background-position: center;
+  padding: 120px 20px;
+  text-align: left; /* جعل الكلام عالشمال */
+  color: white;
+  margin-bottom: 80px;
+  min-height: 600px; /* ارتفاع الهيدر */
+  display: flex;
+  align-items: center; /* توسيط الكلام رأسياً */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* بيجبر المحتوى يبدأ من أول الشمال */
+  padding-left: 0; /* إلغاء أي حواف داخلية للهيدر نفسه */
+}
+
+.hero-content {
+  text-align: left !important;
+  align-items: flex-start !important;
+  margin-left: 20px !important;
+}
+
+.hero h1 { font-size: 4rem; margin-bottom: 20px; font-weight: 800; line-height: 1.2; text-shadow: 0 2px 10px rgba(0,0,0,0.3); }
+.hero p { font-size: 1.3rem; margin-bottom: 40px; color: #e2e8f0; max-width: 600px; text-shadow: 0 1px 5px rgba(0,0,0,0.3); }
+
+/* Sections Styling & Spacing Fixes */
+.section { margin-bottom: 100px; /* زيادة المسافة لمنع التداخل */ }
+.section-title { font-size: 2.5rem; text-align: center; margin-bottom: 60px; color: var(--text-main); position: relative; }
+.section-title::after { content: ''; display: block; width: 60px; height: 5px; background: var(--accent); margin: 15px auto 0; border-radius: 10px; }
+
+/* Lesson Cards */
+.lessons-wrapper { display: flex; flex-direction: column; gap: 100px; max-width: 1000px; margin: 0 auto; }
+.lesson-card { background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.08); border: 1px solid #f1f5f9; }
+.lesson-media iframe { width: 100%; height: 500px; }
+.lesson-content { padding: 50px; }
+.lesson-title { color: var(--primary); font-size: 2.2rem; margin-bottom: 10px; }
+
+/* Text Content */
+.explanation-text { background: #F1F5F9; padding: 40px; border-radius: 15px; border-left: 5px solid var(--accent); margin-top: 30px; }
+.explanation-text h4 { color: #1e3a8a; font-size: 1.5rem; margin-top: 30px; margin-bottom: 15px; }
+.explanation-text ul { padding-left: 20px; margin-bottom: 20px; }
+.explanation-text li { margin-bottom: 8px; color: #475569; }
+
+/* Grammar Spotlight Section (Dark Section) */
+.grammar-spotlight {
+  background: #1e293b; 
+  border-radius: 30px; 
+  padding: 60px; 
+  color: white; 
+  display: flex; 
+  align-items: center; 
+  gap: 50px; 
+  flex-wrap: wrap;
+  box-shadow: 0 20px 40px rgba(30, 41, 59, 0.2);
+  /* منع التداخل */
+  margin-top: 50px;
+}
+
+/* Quiz Styles */
+.quiz-box { max-width: 800px; margin: 0 auto; background: white; padding: 40px; border-radius: 20px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+.option-btn { width: 100%; padding: 20px; margin-bottom: 15px; border: 2px solid #e2e8f0; border-radius: 10px; background: white; text-align: left; cursor: pointer; transition: 0.2s; display: flex; justify-content: space-between; font-size: 1.1rem; }
+.option-btn:hover:not(:disabled) { border-color: var(--primary); background: #eff6ff; }
+.option-btn.correct { background: #dcfce7 !important; border-color: #22c55e !important; color: #14532d; }
+.option-btn.wrong { background: #fee2e2 !important; border-color: #ef4444 !important; color: #7f1d1d; }
+
+/* Footer */
+.footer { background: #0f172a; color: white; padding: 60px 0; margin-top: 120px; text-align: center; }
+.social-links { display: flex; justify-content: center; gap: 25px; margin: 30px 0; }
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; }

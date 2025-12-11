@@ -29,24 +29,22 @@ a { text-decoration: none; color: inherit; transition: 0.3s; }
 
 /* --- HERO SECTION (تعديلات الهيدر) --- */
 .hero {
-  /* غيري الرابط داخل url() بصورتك الخاصة.
-     يمكنك وضع الصورة في مجلد public وكتابة اسمه، مثلاً: url('/header-bg.jpg')
-  */
+
 
   background: linear-gradient(rgba(0, 0, 0, 0.363), rgba(0,0,0,0.7)), url('./photo.png'); 
   background-size: cover;
   background-position: center;
   padding: 120px 20px;
-  text-align: left; /* جعل الكلام عالشمال */
+  text-align: left; 
   color: white;
   margin-bottom: 80px;
-  min-height: 600px; /* ارتفاع الهيدر */
+  min-height: 600px; 
   display: flex;
-  align-items: center; /* توسيط الكلام رأسياً */
+  align-items: center; 
   display: flex;
   align-items: center;
-  justify-content: flex-start; /* بيجبر المحتوى يبدأ من أول الشمال */
-  padding-left: 0; /* إلغاء أي حواف داخلية للهيدر نفسه */
+  justify-content: flex-start; 
+  padding-left: 0; 
 }
 
 .hero-content {

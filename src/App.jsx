@@ -6,11 +6,11 @@ import {
 } from 'lucide-react';
 import './App.css';
 
-// استدعاء صفحة "من نحن" الجديدة من الملف الخارجي
+// استدعاء صفحة "من نحن"
 import AboutPage from './AboutPage';
 
 // ==========================================
-// 1. DATA (المحتوى التعليمي الكامل - 4 وحدات)
+// 1. DATA (المحتوى التعليمي + الفيديوهات المحدثة)
 // ==========================================
 
 const lessonsData = [
@@ -18,34 +18,49 @@ const lessonsData = [
     id: 1,
     title: "Unit 1: Ecotourism",
     desc: "Saving the environment and Present Simple.",
-    videoID: "LXb3EKWsInQ",
+    videoID: "1i4ioqIaXrE", // فيديو الوحدة الأولى
     fullContent: `
       <h4><span style='color:#2563EB'>01</span> Introduction</h4>
       <p>Ecotourism provides holidays to threatened natural environments. It aims to educate tourists and conserve nature.</p>
+      
+      <img src="https://images.unsplash.com/photo-1518173946687-a4c8892bbd9f?q=80&w=800&auto=format&fit=crop" alt="Nature" style="width:100%; border-radius:15px; margin: 20px 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+      
+      <p><strong>Key Principles:</strong> minimizing impact, building environmental awareness, and providing financial benefits for conservation.</p>
+
       <h4><span style='color:#2563EB'>02</span> Grammar: Present Simple</h4>
       <p>Used for facts and habits. <em>Example: The sun rises in the east.</em></p>
+      
+      <img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?q=80&w=800&auto=format&fit=crop" alt="Sun Rise" style="width:100%; border-radius:15px; margin: 20px 0; height: 250px; object-fit: cover;" />
     `
   },
   {
     id: 2,
     title: "Unit 2: Supporting Community",
     desc: "Biologists and Past Tenses.",
-    videoID: "dQw4w9WgXcQ",
+    videoID: "wP_IbZSxhEs", // فيديو الوحدة الثانية
     fullContent: `
       <h4><span style='color:#2563EB'>01</span> Role of Biologists</h4>
-      <p>Biologists study living organisms to solve community problems.</p>
+      <p>Biologists study living organisms to solve community problems. They help protect livestock from predators like lions.</p>
+      
+      <img src="https://images.unsplash.com/photo-1532094349884-543bc11b234d?q=80&w=800&auto=format&fit=crop" alt="Biologist" style="width:100%; border-radius:15px; margin: 20px 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+
       <h4><span style='color:#2563EB'>02</span> Grammar: Past Simple vs Continuous</h4>
       <p><strong>Past Continuous:</strong> Action in progress (was doing).<br><strong>Past Simple:</strong> Action that interrupted (did).</p>
+      
+      <img src="https://images.unsplash.com/photo-1506784983877-45594efa4cbe?q=80&w=800&auto=format&fit=crop" alt="Time and Past Events" style="width:100%; border-radius:15px; margin: 20px 0; height: 250px; object-fit: cover;" />
     `
   },
   {
     id: 3,
     title: "Unit 3: Improving Lives",
     desc: "The Present Perfect Tense and community development.",
-    videoID: "ElZfdU54Cp8",
+    videoID: "henIVlCPVIY", // تم التحديث: فيديو الوحدة الثالثة الجديد
     fullContent: `
       <h4><span style='color:#2563EB'>01</span> Topic: Improving Lives</h4>
-      <p>This unit discusses how technology and voluntary work can improve the quality of life.</p>
+      <p>This unit discusses how technology and voluntary work can improve the quality of life, focusing on initiatives like "Decent Life".</p>
+      
+      <img src="https://images.unsplash.com/photo-1559027615-cd4628902d4a?q=80&w=800&auto=format&fit=crop" alt="Community Work" style="width:100%; border-radius:15px; margin: 20px 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+
       <h4><span style='color:#2563EB'>02</span> Grammar: Present Perfect</h4>
       <p>Form: <strong>Have/Has + P.P.</strong> used for actions starting in the past and continuing to now.</p>
     `
@@ -54,12 +69,15 @@ const lessonsData = [
     id: 4,
     title: "Unit 4: Making New Friends",
     desc: "Definite & Indefinite Articles (a/an/the) and Advice.",
-    videoID: "zL7gN36K8H0",
+    videoID: "bN95rdQaSnA", // فيديو الوحدة الرابعة
     fullContent: `
       <h4><span style='color:#2563EB'>01</span> Topic: Friendship</h4>
-      <p>How to make friends when you move to a new school or city.</p>
+      <p>How to make friends when you move to a new school or city. Being open and friendly is key.</p>
+      
+      <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=800&auto=format&fit=crop" alt="Friends" style="width:100%; border-radius:15px; margin: 20px 0; box-shadow: 0 4px 12px rgba(0,0,0,0.1);" />
+
       <h4><span style='color:#2563EB'>02</span> Grammar: Articles</h4>
-      <p>Rules for using 'a', 'an', and 'the'.</p>
+      <p>Rules for using 'a', 'an', and 'the'. Don't forget that plural nouns generally don't take an article.</p>
     `
   }
 ];
@@ -116,7 +134,7 @@ const Footer = () => (
         <Facebook size={28} /> <Twitter size={28} /> <Youtube size={28} /> <Instagram size={28} />
       </div>
       <div style={{borderTop: '1px solid #334155', paddingTop: '20px', color: '#64748b'}}>
-        © 2025 All Rights Reserved.
+        © 2025 English Hub for 1st Secondary Grade. All Rights Reserved.
       </div>
     </div>
   </footer>
